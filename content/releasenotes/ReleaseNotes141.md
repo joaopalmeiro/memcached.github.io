@@ -14,7 +14,7 @@ This is a maintenance release consisting primarily of bug fixes.
 
 ### Fixes
 
-#### Criticial Fixes
+#### Critical Fixes
 
   * Boundary condition during pipelined decoding caused crash (bug72)
   * Bad initialization during buffer realloc (bug77)

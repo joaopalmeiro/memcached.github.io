@@ -16,7 +16,7 @@ Bugfix release. Adds "GAT" command from binprot to asciiprot.
   * pledge privdropping support for OpenBSD
   * make for loop more clear in logger watcher
   * fix theoretical leak in process_bin_stat
-  * fix use of unitialized array in lru_maintainer
+  * fix use of uninitialized array in lru_maintainer
   * -o no_hashexpand to disable hash table expansion
   * fix chunked items set in binprot, read from ascii
 

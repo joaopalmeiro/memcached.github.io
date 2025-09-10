@@ -22,7 +22,7 @@ helped test this release!
   * extstore: use fcntl locking on disk file
   * portability fix for getsubopt
   * illumos build fixes + require libevent2
-  * core: generalize extstore's defered IO queue
+  * core: generalize extstore's deferred IO queue
   * fix connection limit tests
   * logger: fix spurious watcher hangups
   * watcher.t: reduce flakiness

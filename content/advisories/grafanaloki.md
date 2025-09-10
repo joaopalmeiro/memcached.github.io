@@ -23,7 +23,7 @@ IE, your full start line may look like:
 
 `memcached -m 6000 -I 2m -o ext_path=/disk/extstore:500G,ext_wbuf_size=32,ext_threads=10,ext_max_sleep=10000,slab_automove_freeratio=0.10,ext_recache_rate=0`
 
-*Please set -m and ext_path appropraitely for your system*. Leave some RAM for
+*Please set -m and ext_path appropriately for your system*. Leave some RAM for
 your system to breathe and a little disk space overhead.
 
 Please use version 1.6.21 or newer as it improves the extstore write speed and

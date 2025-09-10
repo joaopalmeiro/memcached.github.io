@@ -11,7 +11,7 @@ http://www.memcached.org/files/memcached-1.5.15.tar.gz
 A couple small bugfixes, and two notable changes. An authentication mode for
 ASCII protocol, and removal of a minor feature flag.
 
-`-o inline_ascii_response` was a compatability mode which was disabled since
+`-o inline_ascii_response` was a compatibility mode which was disabled since
 1.5.0; it uses 10-20 more bytes of memory to speed up ASCII responses. Since
 we switched from snprintf to a fast itoa implementation years ago it was disabled by
 default. Now the option is gone.

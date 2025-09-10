@@ -114,7 +114,7 @@ every few years.
 
 Memory assigned via the `-m` commandline argument to memcached is reserved for item data storage. The primary storage is broken up (by default) into 1 megabyte pages. Each `page` is then assigned into `slab classes` as necessary, then cut into chunks of a specific size for that `slab class`.
 
-Once a page is assigned to a class, it is *never* moved. If your access patterns end up putting 80% of your pages in class 3, there will be less memory available for class 4. The best way to think about this is that memcached is actually many smaller individaul caches. Each class has its own set of statistical counters, and its own LRU.
+Once a page is assigned to a class, it is *never* moved. If your access patterns end up putting 80% of your pages in class 3, there will be less memory available for class 4. The best way to think about this is that memcached is actually many smaller individual caches. Each class has its own set of statistical counters, and its own LRU.
 
 Classes, sizes, and chunks are shown best by starting up memcached with `-vv`:
 

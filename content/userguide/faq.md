@@ -31,7 +31,7 @@ All operations should run in O(1) time. They must be atomic. This doesn't necess
 
 ### Why is memcached not recommended for sessions? Everyone does it!
 
-If a session disappears, often the user is logged out. If a portion of a cache disappears, either due to a hardware crash or a simple software upgrade, it should not cause your users noticable pain. [This overly wordy post](http://dormando.livejournal.com/495593.html) explains alternatives. Memcached can often be used to reduce IO requirements to very very little, which means you may continue to use your existing relational database for the things it's good at.
+If a session disappears, often the user is logged out. If a portion of a cache disappears, either due to a hardware crash or a simple software upgrade, it should not cause your users noticeable pain. [This overly wordy post](http://dormando.livejournal.com/495593.html) explains alternatives. Memcached can often be used to reduce IO requirements to very very little, which means you may continue to use your existing relational database for the things it's good at.
 
 Like keeping your users from being knocked off your site.
 

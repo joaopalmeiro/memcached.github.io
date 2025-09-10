@@ -101,7 +101,7 @@ The latter can show poor hitrates, as many get_misses are accounted for by this 
 
 ## OS Health (avoid swap!)
 
-Memcached interacts hard with the network and with RAM. It's common for people to monitor swap usage, which can cause severe performance degredation to memcached.
+Memcached interacts hard with the network and with RAM. It's common for people to monitor swap usage, which can cause severe performance degradation to memcached.
 
 It's also important to watch your network stack. Linux, for example, sports a number of counters for its network interfaces related to dropped packets, underruns, crc errors, etc. Most switches also have per-port counters on packet issues or link issues. Degraded performance could trace down to bad wiring, bad switchport, a dying NIC, or a network driver in need of tuning.
 
@@ -111,4 +111,4 @@ Most minor releases of memcached focus on fixing bugs and adding instrumentation
 
 Minor features may show up as well. SASL authentication support happened in the mid-1.4 series, but the change is isolated and should not break existing clients.
 
-You should follow new releases and the release notes. It's often better to uprade early so you have the extra instrumentation when you need it, instead of wishing you had it when things go wrong.
+You should follow new releases and the release notes. It's often better to upgrade early so you have the extra instrumentation when you need it, instead of wishing you had it when things go wrong.

@@ -4,7 +4,7 @@ date = 2024-09-01T09:08:32-07:00
 weight = 50
 +++
 
-This page provides illustraed examples of ways that you can create load-balanced, multiple-node cacheing systems using the Memcached built-in proxy. For a general overview of the built-in proxy, see [Built-in proxy]({{<proxy_base_path>}}).
+This page provides illustraed examples of ways that you can create load-balanced, multiple-node caching systems using the Memcached built-in proxy. For a general overview of the built-in proxy, see [Built-in proxy]({{<proxy_base_path>}}).
 
 The memcached proxy is a flexible and lightweight system with few
 dependencies. Any memcached binary can be a proxy, a cache server, or both.

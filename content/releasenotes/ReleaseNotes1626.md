@@ -9,7 +9,7 @@ http://www.memcached.org/files/memcached-1.6.26.tar.gz
 ### Overview
 
 Fixes a crash when `lru_crawler metadump` is used and the client connection is
-closed early. Requires closing the client excactly before the last few
+closed early. Requires closing the client exactly before the last few
 kilobytes of a dump are about to be flushed.
 
 Also improves the ergonomics of proxy configurations via start arguments.

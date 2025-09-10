@@ -51,7 +51,7 @@ segmented LRU. With the "lru" ASCII command you can tune settings live, or
 even switch between algorithms entirely!
 
 So long as memcached is started with `-o modern` or similar, you can
-experiment with the hit ratio of differnt algorithms or options without
+experiment with the hit ratio of different algorithms or options without
 restarting with a cold cache each time.
 
 IE: `lru mode flat` to switch back from segmented. Or `lru mode segmented` to

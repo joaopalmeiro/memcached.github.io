@@ -14,7 +14,7 @@ Bugfix release, with a critical fix to large item support.
 
   * Add MemoryDenyWriteExecute to the systemd service
   * Handle end of line comment on memcached.conf
-  * Add missing parameters and escape hypens as minus to manpage
+  * Add missing parameters and escape hyphens as minus to manpage
   * Modernize unit file in systemd
   * crawler now uses rate limiter sleeps properly (CPU overusage)
   * add slab_chunk_max to `stats settings`

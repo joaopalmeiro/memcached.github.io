@@ -8,7 +8,7 @@ http://www.memcached.org/files/memcached-1.6.14.tar.gz
 
 ### Overview
 
-Montly bugfix release. Important fix if you happen to have a couple billion
+Monthly bugfix release. Important fix if you happen to have a couple billion
 items in a single instance. A handful of useful fixes and a bunch of updates
 to the upcoming proxy feature.
 

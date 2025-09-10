@@ -65,7 +65,7 @@ new connections. When this happens, connections will sit in the listen backlog
 close off, memcached will starts accepting new connections again and they will
 be served.
 
-This is undesireable as it can cause clients to delay or timeout for a long
+This is undesirable as it can cause clients to delay or timeout for a long
 period of time. Long enough that it may be quicker to treat the items as a
 cache miss.
 
@@ -92,7 +92,7 @@ There is also a new option for setting the size of the hash table on startup:
 ```$ memcached -o hashpower=20}}}
 
 If you run instances with many millions of items, and items are added very
-rapidly on a restart, it may be desireable to _presize_ the hash table.
+rapidly on a restart, it may be desirable to _presize_ the hash table.
 Normally memcached will dynamically grow the hash table as needed, and this
 operation is generally very low overhead. If you put decals on your '96 Mazda
 grapefruit shootermobile, you may like this option.

@@ -45,7 +45,7 @@ Since 1.5.6 memcached defaults to listening only on TCP. `-l` allows you to bind
 
 ### Unix Sockets
 
-If you wish to restrict a daemon to be accessable by a single local user, or just don't wish to expose it via networking, a unix domain socket may be used. `-s <file>` is the parameter you're after. If enabling this, TCP/UDP will be disabled.
+If you wish to restrict a daemon to be accessible by a single local user, or just don't wish to expose it via networking, a unix domain socket may be used. `-s <file>` is the parameter you're after. If enabling this, TCP/UDP will be disabled.
 
 ## Connection Limit
 

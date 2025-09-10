@@ -175,9 +175,9 @@ A common trick is to use soft expiration values embedded in your cached object. 
 
 When you fetch an object and it has passed the soft timeout, you can pick any method that agrees with you to re-cache it:
 
- * Do a "lock" as noted above. If you fail to aquire the lock, return the old cached item. Lock winner recaches.
+ * Do a "lock" as noted above. If you fail to acquire the lock, return the old cached item. Lock winner recaches.
  * Also store a "hard" timeout, or just assume the hard timeout is soft timeout + a value. Randomly decide if you want to recache, and increase the odds of recaching the value the older the item is.
- * Dispatch an asyncronous job to recache the object.
+ * Dispatch an asynchronous job to recache the object.
  * etc.
 
 The cache object can still go away for many reasons (server restart, LRU, eviction, etc). Use this as mitigation but not your only line of defense.
@@ -186,11 +186,11 @@ The cache object can still go away for many reasons (server restart, LRU, evicti
 
 Using a job server can be an easy win. [Gearman](http://gearman.org/) is a common, fast, scalable job service. While funneling recache requests through a job server will certainly add overhead, you can selectively use the service or rely purely on background jobs. Perhaps you'll want to funnel high traffic users through gearmand, but no one else.
 
-Gearmand has two magic tricks; asyncronous or syncronous job processing.
+Gearmand has two magic tricks; asynchronous or synchronous job processing.
 
-In the case of a scaling expiration value, you can issue an asyncronous job to recache the object, then return the cache to a user. Gearmand can collapse similar jobs down so you don't end up executing millions of them.
+In the case of a scaling expiration value, you can issue an asynchronous job to recache the object, then return the cache to a user. Gearmand can collapse similar jobs down so you don't end up executing millions of them.
 
-In the case of a syncronous update, gearmand can coalesce incoming jobs with the same parameters. So the first process to issue the job request will get a worker to recache the data. Every other procecss after him will "subscribe" to the results of that first job, and not create more parallelism. When the first job finishes, gearmand broadcasts the response to all listeners and they all continue forward as though they had issued the request directly.
+In the case of a synchronous update, gearmand can coalesce incoming jobs with the same parameters. So the first process to issue the job request will get a worker to recache the data. Every other procecss after him will "subscribe" to the results of that first job, and not create more parallelism. When the first job finishes, gearmand broadcasts the response to all listeners and they all continue forward as though they had issued the request directly.
 
 Very handy.
 

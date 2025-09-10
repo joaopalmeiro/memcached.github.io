@@ -13,7 +13,7 @@ fix for large text multigets in certain conditions, and a rare slowdown in
 extstore.
 
 Also included in the codebase is a non production ready test version of an
-integrated proxy. For adventerous developers see `t/proxy.t` test code and the
+integrated proxy. For adventurous developers see `t/proxy.t` test code and the
 lua libraries at https://github.com/memcached/memcached-proxylibs - for
 everyone else, hold on for future versions.
 

@@ -22,7 +22,7 @@ being blind for a few weeks.
 
 ### Fixes
 
-  * Fix a race condition causing new connections to appear closed, causing an inifinte loop.
+  * Fix a race condition causing new connections to appear closed, causing an infinite loop.
 
 
 ### New Features

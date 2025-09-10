@@ -179,7 +179,7 @@ some amount of time.
 
 For example, if you only store objects with TTL's of 86400 (about a day) or
 2400s. If you set `ext_low_ttl` to 2400 or higher, all of the latter objects
-will get stuck together. Once all of those objets have expired, the page they
+will get stuck together. Once all of those objects have expired, the page they
 were in is reclaimed entirely. This avoids holes and compaction necessary if
 placed alongside the longer TTL'ed objects.
 
@@ -276,11 +276,11 @@ Compaction however does require rewriting pages. More details of that is in doc/
 
 `-o ext_path=/data/file:5G` this is enough to get you started. See `memcached --help` for other options. This wiki will update with more details on what the options do, but most users should be able to use a minimal subset of options. If you have a very high performance setup, feel free to reach out and we can walk you through a configuration.
 
-The above creates an external cache of 5 gigabytes. Due to how the shim works, you wil not be able to actually store 5 gigabytes due to fragmentation over time. Background jobs will attempt to keep fragmentation in check.
+The above creates an external cache of 5 gigabytes. Due to how the shim works, you will not be able to actually store 5 gigabytes due to fragmentation over time. Background jobs will attempt to keep fragmentation in check.
 
 ## How safe is this really?
 
-I test pretty aggressively while developing features. The general stability of memcached should attest to a high quality. This feature is still in an experimental tages, but has had a good amount of baking time for the operations it does support. Keep in mind that many features are disabled for items sent to disk (incr/decr/append/prepend)
+I test pretty aggressively while developing features. The general stability of memcached should attest to a high quality. This feature is still in an experimental stage, but has had a good amount of baking time for the operations it does support. Keep in mind that many features are disabled for items sent to disk (incr/decr/append/prepend)
 
 ---
 
@@ -673,7 +673,7 @@ The slab page balancer has an algorithm specific for extstore configurations.
 
 For reference, [a python](https://github.com/memcached/memcached/blob/master/scripts/memcached-automove-extstore) and [internal C version](https://github.com/memcached/memcached/blob/master/slab_automove_extstore.c) of the algorithm exist.
 
-When tuning changes to the algoritm, it's easy to disable the internal
+When tuning changes to the algorithm, it's easy to disable the internal
 algorithm and use external scripts.
 
 Since the extstore system is designed to send items to storage before they're

@@ -41,7 +41,7 @@ still evict, over time 3 will still become starved.
 
 This new algorithm attempts to keep the youngest evicting slab class to within
 80% of the age of the oldest slab class (by default). Ages are averaged over a
-window to avoid ping-ponging memory between slab classe.
+window to avoid ping-ponging memory between slab classes.
 
 It also still aggressively frees memory if too much is free.
 

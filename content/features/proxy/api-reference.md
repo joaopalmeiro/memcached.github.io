@@ -76,7 +76,7 @@ The first stage is to call `mcp_config_pools` from the "configuration thread".
 This stage defines backends and organizes them into pools. It is also a good
 place to decide on how keys and commands should be routed. A table tree of
 information is then returned from this function. The proxy is not blocked or
-otherise impacted while this function runs.
+otherwise impacted while this function runs.
 
 The second stage is to call `mcp_config_routes` from each "worker thread".
 These VM's run independently for performance reasons: there is no locking
@@ -200,7 +200,7 @@ using a scripting language to process requests.
 -- slot, further improving performance. It also lets all slots share internal
 -- references to pools and backends.
 
--- This function is excuted during the second stage, on every worker thread.
+-- This function is executed during the second stage, on every worker thread.
 -- The `t` argument is the table that was returned by the _conf function.
 -- All information needed to generate this handler _must_ be contained in this
 -- table. It is bad form to reach for global variables at this stage.
@@ -704,7 +704,7 @@ mcp.pool({backend1, backend2, etc}, {
     -- [TODO: add anchor for details]
     iothread = true|false,
 
-    -- If supplied this prefix will be added to the lables of all specified
+    -- If supplied this prefix will be added to the labels of all specified
     -- backends. This means this pool object will get unique TCP sockets for
     -- its backends. Usable for dedicating different sockets for different
     -- purposes (gets vs sets).

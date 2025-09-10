@@ -425,7 +425,7 @@ hi
 EX
 ```
 
-The above could be the result of a race condition: two proceses are trying to
+The above could be the result of a race condition: two processes are trying to
 move the data from version 72 to 73 at the same time. Since the underlying
 version is already 73, the second command will fail.
 

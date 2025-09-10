@@ -297,7 +297,7 @@ temporarily rerouting cache requests while a server is failed. We do this first 
 
 Next, if a request has failed over, we adjust the TTL of any 'set' commands
 to be lower. In this example we use five minutes. This prevents cache
-entires that have "failed over" from staying around for a long period of
+entries that have "failed over" from staying around for a long period of
 time, which can cause issues if server 'b' repeatedly fails.
 
 The short cache time should allow a good hit rate for objects which are
@@ -312,13 +312,13 @@ Q&A:
   - This will depend on your needs. Please contact us if you have questions
   here.
 - How do we handle backends that are flapping (ie; sometimes timing out but
-  not competely dead?
+  not completely dead?
   - You can adjust "anti flap" settings, which will force a backend to
   stay down with a backoff algorithm:
 ```lua
 settings{
   backend_flap_time = 30, -- stable for 30 seconds means not flapping
-  backend_flap_backoff_ramp = 1.2, -- multipler for backoff wait time
+  backend_flap_backoff_ramp = 1.2, -- multiplier for backoff wait time
   backend_flap_backoff_max = 3600, -- try at least once an hour
 }
 ```

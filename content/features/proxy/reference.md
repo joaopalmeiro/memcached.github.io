@@ -221,7 +221,7 @@ cmdmap {
 Replace the following:
 
 * <var>COMMAND</var>: a Memcached command—for example, `set`. For a command list, see [Basic Text Protocol](/protocols/basic/).
-* <var>ROUTE_HANDLER</var>: a full route-handler defnition—for example, `route_direct{ [...] }`.
+* <var>ROUTE_HANDLER</var>: a full route-handler definition—for example, `route_direct{ [...] }`.
 
 You can use a `cmdmap{}` call in your configuration file in any place where a route handler call is valid. The following example `map{}` block defines a route that proxy uses only for keys with the prefix `main` and the command `set`:
 

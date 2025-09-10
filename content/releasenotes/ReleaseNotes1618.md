@@ -10,7 +10,7 @@ http://www.memcached.org/files/memcached-1.6.18.tar.gz
 
 Mostly fixes and improvements to proxy mode.
 
-Meta protocol has some adjusments: extra spaces were being returns in a few
+Meta protocol has some adjustments: extra spaces were being returns in a few
 instances. If your client is looking for an exact number of spaces in meta
 responses please take note. We regret the error.
 
