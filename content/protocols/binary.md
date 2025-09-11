@@ -83,17 +83,18 @@ General format of a packet:
 ```
 
 ### Header fields description
-   <dt>Magic</dt><dd>Magic number identifying the package (See [BinaryProtocolRevamped#Magic_Byte])</dd>
-   <dt>Opcode</dt><dd>Command code (See [BinaryProtocolRevamped#Command_opcodes])</dd>
+<dl>
+   <dt>Magic</dt><dd>Magic number identifying the package (See <a href="#magic-byte">Magic Byte</a>)</dd>
+   <dt>Opcode</dt><dd>Command code (See <a href="#command-opcodes">Command Opcodes</a>)</dd>
    <dt>Key length</dt><dd>Length in bytes of the text key that follows the command extras</dd>
-   <dt>Status</dt><dd>Status of the response (non-zero on error) (See [BinaryProtocolRevamped#Response_Status])</dd>
+   <dt>Status</dt><dd>Status of the response (non-zero on error) (See <a href="#response-status">Response Status</a>)</dd>
    <dt>Extras length</dt><dd>Length in bytes of the command extras</dd>
-   <dt>Data type</dt><dd>Reserved for future use (See [BinaryProtocolRevamped#Data_Type])</dd>
+   <dt>Data type</dt><dd>Reserved for future use (See <a href="#data-types">Data types</a>)</dd>
    <dt>vbucket id</dt><dd>The virtual bucket for this command</dd>
    <dt>Total body length</dt><dd>Length in bytes of extra + key + value</dd>
    <dt>Opaque</dt><dd>Will be copied back to you in the response</dd>
    <dt>CAS</dt><dd>Data version check</dd>
-
+</dl>
 
 ## Defined Values
 
